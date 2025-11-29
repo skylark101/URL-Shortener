@@ -41,7 +41,11 @@ const isValidUrl = (url) => {
 // CREATE SHORT URL
 app.post("/api/short", async (req, res) => {
   try {
-    const { originalUrl } = req.body;
+    let { originalUrl } = req.body;
+
+    if (!/^https?:\/\//i.test(originalUrl)) {
+      originalUrl = "https://" + originalUrl;
+    }
 
     if (!originalUrl) {
       return res.status(400).json({ message: "URL is required!" });
