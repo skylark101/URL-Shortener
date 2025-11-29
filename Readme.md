@@ -1,42 +1,32 @@
-🔗 URL Shortener
+# 🔗 URL Shortener
 
 A fast and reliable URL Shortener application that converts long links into short, shareable URLs and automatically generates a QR code for each shortened link.
 
-🚀 Live Demo
+## 🚀 Live Demo
+- 👉 https://url-shortener-frontend-1nbf.onrender.com/
 
-Access the app here:
-👉 https://url-shortener-frontend-1nbf.onrender.com/
+## 🛠 Tech Stack
+- **Frontend:** React
+- **Backend:** Node.js (Express)
+- **Database:** MongoDB
 
-🛠 Tech Stack
+## ✨ Features
+- ✅ Shorten long URLs instantly  
+- ✅ Generate a QR code for every short link  
+- ✅ Reuse existing short URLs (no duplicates for the same original URL)  
+- ✅ Redirect short URLs to original links  
+- ✅ Clean and responsive user interface  
+- ✅ Persistent storage using MongoDB  
+- ✅ RESTful API architecture  
 
-Frontend: React
-Backend: Node.js (Express)
-Database: MongoDB
+## 📦 How It Works
+1. Enter a long URL in the input field.
+2. Click the shorten button.
+3. If the URL already exists, the existing short URL is returned.
+4. A QR code is generated immediately.
+5. Use the link or scan the QR code to access the original URL.
 
-✨ Features
-
-Shorten long URLs instantly
-
-Generate a QR code for every short link
-
-Reuse existing short URLs (no duplicates for the same original URL)
-
-Redirect from short URL to the original link
-
-Clean and responsive user interface
-
-Persistent data storage using MongoDB
-
-RESTful API architecture
-
-📦 How It Works
-
-Enter a long URL.
-
-Click the shorten button.
-
-If the URL already exists, the previously generated short link is returned.
-
-A QR code is generated for instant sharing.
-
-Use the short link or scan the QR code to access the original URL.
+## 📁 Project Structure
+```text
+frontend/   # React frontend
+backend/   # Node.js backend
