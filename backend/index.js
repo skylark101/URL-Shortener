@@ -13,13 +13,13 @@ app.use(express.json());
 // ---------------- DB CONNECTION ----------------
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("DB Connected successfully!"))
+  .then(() => console.log("DB Connected Successfully!"))
   .catch((err) => console.log("DB Connection Failed!", err));
 
 // ---------------- SCHEMA ----------------
 const urlSchema = new mongoose.Schema({
   originalUrl: { type: String, required: true },
-  shortUrl: { type: String, required: true, unique: true }, // store only nanon id
+  shortUrl: { type: String, required: true, unique: true }, // store only nano id
   qrCodeImg: { type: String, required: true },
   clicks: { type: Number, default: 0 },
 });
@@ -112,8 +112,8 @@ app.get("/:shortUrl", async (req, res) => {
 });
 
 // ---------------- SERVER ----------------
-const PORT = Number(process.env.DEFAULT_PORT) || 5000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
