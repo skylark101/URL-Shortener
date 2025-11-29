@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-<div className="relative min-h-screen flex justify-center pt-24 sm:pt-0 sm:items-center bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-6">
+<div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-6">
       <a
         href="https://github.com/skylark101/URL-Shortener"
         target="_blank"
