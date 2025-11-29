@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Github } from "lucide-react";
 
 import "./App.css";
 
@@ -27,7 +28,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-6">
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-6">
+      <a
+        href="https://github.com/skylark101/URL-Shortener"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute top-4 right-4 text-gray-700 hover:text-black transition"
+      >
+        <Github size={26} />
+      </a>
+
       <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl p-8 w-full max-w-md border border-white/40">
         <h1 className="text-4xl font-extrabold text-center bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6">
           URL Shortener
