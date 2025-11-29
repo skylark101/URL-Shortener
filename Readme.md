@@ -9,6 +9,7 @@ A fast and reliable URL Shortener application that converts long links into shor
 - **Frontend:** React
 - **Backend:** Node.js (Express)
 - **Database:** MongoDB
+- **Deployment:** Vercel
 
 ## ✨ Features
 - ✅ Shorten long URLs instantly  
