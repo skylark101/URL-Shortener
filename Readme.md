@@ -3,7 +3,7 @@
 A fast and reliable URL Shortener application that converts long links into short, shareable URLs and automatically generates a QR code for each shortened link.
 
 ## 🚀 Live Demo
-- 👉 https://su.anshkhattar.com/
+👉 https://su.anshkhattar.com/
 
 ## 🛠 Tech Stack
 - **Frontend:** React
