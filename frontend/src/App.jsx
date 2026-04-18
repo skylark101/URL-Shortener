@@ -80,6 +80,7 @@ function App() {
               </a>
 
               <button
+                type="button"
                 onClick={handleCopy}
                 className="mt-3 px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 transition active:scale-95"
               >
