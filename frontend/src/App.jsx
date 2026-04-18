@@ -7,6 +7,7 @@ import "./App.css";
 function App() {
   const [originalUrl, setOriginalUrl] = useState("");
   const [shortUrlData, setShortUrlData] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const handleSubmit = () => {
     const endpoint = `${import.meta.env.VITE_BACKEND_BASE_URL}/api/short`;
@@ -18,6 +19,11 @@ function App() {
       })
       .catch((err) => console.error(err));
   };
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(shortUrlData.shortUrl);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const handleDownloadImage = (e) => {
     e.preventDefault();
@@ -28,7 +34,7 @@ function App() {
   };
 
   return (
-<div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-6">
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 px-4 py-6">
       <a
         href="https://github.com/skylark101/URL-Shortener"
         target="_blank"
@@ -73,6 +79,12 @@ function App() {
                 {shortUrlData.shortUrl}
               </a>
 
+              <button
+                onClick={handleCopy}
+                className="mt-3 px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 transition active:scale-95"
+              >
+                {copied ? "Copied!" : "Copy"}
+              </button>
               <div className="mt-5 flex flex-col items-center gap-3">
                 <img
                   src={shortUrlData.qrCodeImg}

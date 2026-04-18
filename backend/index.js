@@ -7,7 +7,13 @@ import QRCode from "qrcode";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://su.anshkhattar.com"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 // ---------------- DB CONNECTION ----------------
@@ -37,6 +43,7 @@ const isValidUrl = (url) => {
 };
 
 // ---------------- API ROUTES ----------------
+
 
 // CREATE SHORT URL
 app.post("/api/short", async (req, res) => {
